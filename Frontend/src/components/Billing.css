@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+/* Remove the body styles as they should be handled globally */
+/* body{
+    overflow-y: scroll;
+    height: auto;
+} */
+
+.billing-container {
+    padding: 20px;
+    position: relative;
+    left: 320px;
+    top: 80px;
+    /* width: calc(100vw - 320px); Use calc to prevent overflow */
+    width: 70vw;
+    background-color: #fff;
+    height: auto;
+    /* min-height: calc(100vh - 80px); Set minimum height */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+.billing-form-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(1, 41, 112, 0.1);
+}
+
+h2, h3 {
+    color: #012970;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #012970;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #012970;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4154f1;
+    box-shadow: 0 0 5px rgba(65, 84, 241, 0.2);
+}
+
+.selected-medicines {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.selected-medicine-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.selected-medicine-item:last-child {
+    border-bottom: none;
+}
+
+.medicine-name {
+    font-weight: 500;
+    color: #012970;
+}
+
+.medicine-quantity {
+    color: #6c757d;
+}
+
+.medicine-price {
+    font-weight: 600;
+    color: #012970;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #dee2e6;
+    font-weight: 600;
+    color: #012970;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: #4154f1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #364cf0;
+}
+
+.submit-btn:disabled {
+    background-color: #98a1f3;
+    cursor: not-allowed;
+}
+
+.error-message {
+    background-color: #ffe5e5;
+    color: #d63031;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.select-medicine-button{
+    /* background-color: rgb(100, 150, 255); */
+    background-color: #364cf0;
+    width: fit-content;
+    padding: .5em;
+    font-size: 1.3em;
+    border-radius: .3em;
+}
+.select-medicine-button-child{
+    color: white;
+}

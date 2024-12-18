@@ -1,0 +1,97 @@
+.billing-history-container {
+    position: relative;
+    left: 320px;
+    top: 80px;
+    width: 70vw;
+    background-color: #fff;
+    height: auto;
+    padding: 20px;
+}
+
+.billing-history-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.billing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.billing-table th {
+    background-color: #f8f9fa;
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #dee2e6;
+    white-space: nowrap;
+}
+
+.billing-table td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #dee2e6;
+    color: #555;
+}
+
+.billing-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.billing-table .price-column {
+    text-align: right;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.medicines-list {
+    color: #666;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8d7da;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+/* Address column specific style */
+.billing-table td:nth-child(4) {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (max-width: 1200px) {
+    .billing-history-container {
+        width: calc(100vw - 340px);
+        padding: 10px;
+    }
+
+    .billing-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 768px) {
+    .billing-history-container {
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+}

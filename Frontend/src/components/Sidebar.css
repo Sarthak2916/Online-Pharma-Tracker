@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+.sidebar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 5;
+    transition: all 0.3s;
+    padding: 20px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #aab7cf transparent;
+    box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+    background-color: #fff;
+}
+.sidebar-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+ol, ul {
+    padding-left: 2rem;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+.sidebar-nav .nav-item {
+    margin-bottom: 5px;
+}
+.sidebar-nav li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #012970;
+    transition: 0.3s;
+    background: #f6f9ff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    gap: 0.7em;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Style for the first icon */
+.sidebar-nav .nav-link > *:first-child {
+    margin-right: 5px;
+    flex-shrink: 0;
+}
+
+/* Style for the text span */
+.sidebar-nav .nav-link span {
+    flex-grow: 1;
+}
+
+/* Style for the arrow icon */
+.sidebar-nav .nav-link .arrow-icon {
+    margin-left: auto;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when menu is open */
+.sidebar-nav .nav-link:not(.collapsed) .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Style for the arrow icon */
+.sidebar-nav .nav-link .arrow-icon {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.sidebar-nav .nav-link.collapsed {
+    color: #012970;
+    background: #fff;
+}
+.sidebar-nav .nav-link:hover {
+    color: #012970;
+    background: #f6f9ff;
+}
+.nav-link {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: var(--bs-nav-link-color);
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+.nav-link Link, .nav-link a {
+    color: inherit;
+    text-decoration: none;
+}
+.sidebar-nav .nav-link i {
+    font-size: 16px;
+    margin-right: 10px;
+    /* color: #4154f1; */
+}
+.sidebar-nav .nav-link.collapsed i {
+    color: #899bbd;
+}
+.sidebar-nav .nav-link .bi-chevron-down {
+    margin-right: 0;
+    transition: transform 0.2s ease-in-out;
+}
+.bi-menu-button-wide::before {
+    content: "\f489";
+}
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Menu content transition */
+.nav-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    padding: 0;
+}
+
+.nav-content.show {
+    max-height: 500px;
+    opacity: 1;
+    padding: 10px 0;
+}
+
+/* Style for the arrow icon */
+.sidebar-nav .nav-link .arrow-icon {
+    margin-left: auto;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when menu is open */
+.sidebar-nav .nav-link:not(.collapsed) .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Menu items styling */
+.nav-content li {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-content.show li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger the animation of menu items */
+.nav-content li:nth-child(1) { transition-delay: 0.1s; }
+.nav-content li:nth-child(2) { transition-delay: 0.15s; }
+.nav-content li:nth-child(3) { transition-delay: 0.2s; }
+.nav-content li:nth-child(4) { transition-delay: 0.25s; }
+
+/* Menu item hover effect */
+.nav-content li a {
+    padding: 7px 0 7px 47px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #012970;
+    transition: all 0.3s ease;
+}
+
+.nav-content li a:hover {
+    color: #4154f1;
+    background: rgba(65, 84, 241, 0.05);
+}
+
+/* Make nav links clickable */
+.sidebar-nav .nav-link {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #012970;
+    transition: all 0.3s ease;
+    background: #f6f9ff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    gap: 0.7em;
+    position: relative;
+}
+
+.sidebar-nav .nav-link.collapsed {
+    color: #012970;
+    background: #fff;
+}
+
+.sidebar-nav .nav-link:hover {
+    color: #4154f1;
+    background: #f6f9ff;
+}
+
+/* Link icon styling */
+.sidebar-nav .nav-link > *:first-child {
+    margin-right: 5px;
+    flex-shrink: 0;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Text span styling */
+.sidebar-nav .nav-link span {
+    flex-grow: 1;
+}

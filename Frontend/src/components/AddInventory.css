@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+body{
+    overflow-y: scroll;
+    /* background-color: #f3f7fd;
+     */
+     height: auto;
+     /* background-color: red; */
+}
+.add-inventory-container {
+    position: relative;
+    left: 320px;
+    top: 80px;
+    width: 70vw;
+    background-color: #fff;
+    padding: 20px;
+    min-height: calc(100vh - 100px);
+}
+
+.add-inventory-header {
+    margin-bottom: 30px;
+}
+
+.add-inventory-header h1 {
+    color: #012970;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.add-inventory-form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(1, 41, 112, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #012970;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #012970;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4154f1;
+    box-shadow: 0 0 5px rgba(65, 84, 241, 0.2);
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.error-message {
+    color: #dc3545;
+    background-color: #ffe0e3;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-left: 4px solid #dc3545;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.submit-button,
+.cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button {
+    background-color: #4154f1;
+    color: #fff;
+}
+
+.submit-button:hover {
+    background-color: #364cf0;
+}
+
+.submit-button:disabled {
+    background-color: #98a1f3;
+    cursor: not-allowed;
+}
+
+.cancel-button {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.cancel-button:hover {
+    background-color: #5c636a;
+}
+
+.cancel-button:disabled {
+    background-color: #a8aeb3;
+    cursor: not-allowed;
+}
+
+/* Input placeholder styles */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+/* Number input specific styles */
+.form-group input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.form-group input[type="number"]::-webkit-outer-spin-button,
+.form-group input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.character-count {
+    display: block;
+    text-align: right;
+    color: #6c757d;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form-group input:invalid,
+.form-group textarea:invalid {
+    border-color: #dc3545;
+}
+
+.form-group input:invalid:focus,
+.form-group textarea:invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.2);
+}
